@@ -212,6 +212,7 @@ packages:
   VORLAUFSOLLTEMP:            !include { file: wp_temperature.yaml, vars: { property: "VORLAUFSOLLTEMP"    , target: "HK1"  }}
   VERDAMPFERTEMP:             !include { file: wp_temperature.yaml, vars: { property: "VERDAMPFERTEMP"     , target: "Manager"  }}
   RUECKLAUFISTTEMP:           !include { file: wp_temperature.yaml, vars: { property: "RUECKLAUFISTTEMP"   , update_interval: $interval_medium , target: "MFG" }}
+
   AUSSENTEMP:                 !include { file: wp_temperature.yaml, vars: { property: "AUSSENTEMP"         , update_interval: $interval_medium , target: "Kessel" }}
   VORLAUFISTTEMP_WP:          !include { file: wp_temperature.yaml, vars: { property: "VORLAUFISTTEMP_WP"  , update_interval: $interval_medium , target: "Kessel" }}
   RUECKLAUFISTTEMP_WP:        !include { file: wp_temperature.yaml, vars: { property: "RUECKLAUFISTTEMP_WP", update_interval: $interval_medium , target: "Kessel" }}
@@ -249,6 +250,15 @@ packages:
   TAUPUNKTTEMP:                  !include { file: wp_temperature.yaml, vars: { property: "TAUPUNKTTEMP", target: "HK2"  }}
   RAUMSOLLTEMP_KUEHLEN:          !include { file: wp_temperature.yaml, vars: { property: "RAUMSOLLTEMP_KUEHLEN", target: "HK2"  }}
   LEISTUNG_KUEHLEN:              !include { file: wp_generic.yaml, vars: { property: "LEISTUNG_KUEHLEN", unit: "kW", target: "WPM2"  }}
+  
+  RUECKLAUFTEMP:              !include { file: wp_temperature.yaml, vars: { property: "RUECKLAUFTEMP"      , update_interval: $interval_medium , target: "Manager" }}
+  KUEHLEN_SOLLTEMP:           !include { file: wp_temperature.yaml, vars: { property: "KUEHLEN_SOLLTEMP"   , update_interval: $interval_medium , target: "Kessel" }}
+  KUEHLEN_ISTTEMP:            !include { file: wp_temperature.yaml, vars: { property: "KUEHLEN_ISTTEMP"    , update_interval: $interval_medium , target: "Kessel" }}
+  ISTTEMPERATUR_KK_2:         !include { file: wp_temperature.yaml, vars: { property: "ISTTEMPERATUR_KK_2" , update_interval: $interval_medium , target: "HK2" }}
+  SOLLTEMPERATUR_KK_2:        !include { file: wp_temperature.yaml, vars: { property: "SOLLTEMPERATUR_KK_2", update_interval: $interval_medium , target: "HK2" }}
+  ANLAGEFROST:                !include { file: wp_temperature.yaml, vars: { property: "ANLAGEFROST"        , update_interval: $interval_medium , target: "Kessel" }}
+  VORLAUFISTTEMP_NHZ:         !include { file: wp_temperature.yaml, vars: { property: "VORLAUFISTTEMP_NHZ" , update_interval: $interval_medium , target: "Kessel" }}
+  LAUFZEIT_PASSIVKUEHLUNG:    !include { file: wp_generic.yaml,     vars: { property: "LAUFZEIT_PASSIVKUEHLUNG", scaler: "10", unit: "h", target: "Manager"  }}
 
   RAUMFEUCHTE:                !include { file: wp_generic.yaml,     vars: { property: "RAUMFEUCHTE" , interval: $interval_very_slow, unit: "%", icon: "mdi:water-percent", accuracy_decimals: "1", target: "FET"  }}
   HEIZEN_EFFIZIENZ_TAG:       !include { file: wp_generic.yaml,     vars: { property: "HEIZEN_EFFIZIENZ_TAG"  , target: "WPM2", accuracy_decimals: "2" }}
