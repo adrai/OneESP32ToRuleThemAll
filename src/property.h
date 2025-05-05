@@ -272,6 +272,7 @@ struct Property : public detail::Property {
     PROPERTY(VERDICHTERDREHZAHLGRENZE, 0x4fac, Type::et_dec_val);
     PROPERTY(IST_UEBERHITZUNG_SAUGGAS_VERDICHTER, 0x4fa2, Type::et_dec_val);
     PROPERTY(SOLL_UEBERHITZUNG_SAUGGAS_VERDICHTER, 0x4fa1, Type::et_dec_val);
+    PROPERTY(ZEITINTERVALL, 0x4f4d, Type::et_dec_val);
 #endif
 };
 
